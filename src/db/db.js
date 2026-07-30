@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+require("dotenv").config();
 
 async function connectDB() {
-    await mongoose.connect('mongodb+srv://Backend:jmuHQutGzgtoKlDB@complete-backend.sbjna62.mongodb.net/project-1')
+    await mongoose.connect(process.env.MONGODB_LINK_KEY) 
     console.log('Connected to DB');
     
 }
